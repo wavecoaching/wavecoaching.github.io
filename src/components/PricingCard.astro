@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  price: string;
+  period?: string;
+  description: string;
+  features: string[];
+  stripeUrl: string;
+  highlighted?: boolean;
+  badge?: string;
+}
+
+const {
+  title,
+  price,
+  period = 'session',
+  description,
+  features,
+  stripeUrl,
+  highlighted = false,
+  badge,
+} = Astro.props;
+---
+
+<div class={`relative rounded-2xl p-8 flex flex-col h-full transition-all duration-300 ${
+  highlighted
+    ? 'bg-gradient-to-br from-wave-blue to-wave-blue-dark text-white shadow-2xl scale-105 border-2 border-wave-blue'
+    : 'bg-white border border-gray-100 shadow-md hover:shadow-xl'
+}`}>
+
+  {badge && (
+    <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+      <span class="bg-wave-pink text-white text-xs font-bold px-4 py-1 rounded-full shadow">
+        {badge}
+      </span>
+    </div>
+  )}
+
+  <!-- Title -->
+  <h3 class={`text-lg font-bold mb-1 ${highlighted ? 'text-white' : 'text-wave-blue-dark'}`}>
+    {title}
+  </h3>
+  <p class={`text-sm mb-5 ${highlighted ? 'text-blue-200' : 'text-wave-gray'}`}>{description}</p>
+
+  <!-- Price -->
+  <div class="mb-6">
+    <span class={`text-4xl font-extrabold ${highlighted ? 'text-white' : 'text-wave-blue-dark'}`}>{price}</span>
+    <span class={`text-sm ml-1 ${highlighted ? 'text-blue-200' : 'text-wave-gray'}`}>/ {period}</span>
+  </div>
+
+  <!-- Features -->
+  <ul class="space-y-2.5 mb-8 flex-grow">
+    {features.map(f => (
+      <li class="flex items-center gap-2 text-sm">
+        <svg class={`w-4 h-4 flex-shrink-0 ${highlighted ? 'text-wave-peach' : 'text-wave-blue'}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        <span class={highlighted ? 'text-blue-100' : 'text-wave-gray'}>{f}</span>
+      </li>
+    ))}
+  </ul>
+
+  <!-- Stripe CTA -->
+  <!-- Replace stripeUrl with your real Stripe Payment Link: https://buy.stripe.com/... -->
+  <a
+    href={stripeUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class={`mt-auto block text-center font-bold px-6 py-3 rounded-xl text-sm transition-all duration-200 ${
+      highlighted
+        ? 'bg-wave-pink hover:bg-wave-pink-dark text-white shadow-lg hover:shadow-xl'
+        : 'bg-wave-blue hover:bg-wave-blue-dark text-white'
+    }`}
+    data-stripe-placeholder="true"
+  >
+    Buy Now
+  </a>
+</div>

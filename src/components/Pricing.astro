@@ -1,0 +1,78 @@
+---
+import PricingCard from './PricingCard.astro';
+
+const plans = [
+  {
+    title: 'Swim Analysis',
+    price: '$75',
+    period: 'session',
+    description: 'One-off video stroke analysis with written report and drill plan.',
+    features: [
+      'Underwater + above-water video',
+      'Frame-by-frame breakdown',
+      'Drill prescription report',
+      'Email delivery within 48 hours',
+    ],
+    // Replace with real Stripe Payment Link
+    stripeUrl: 'https://buy.stripe.com/placeholder',
+  },
+  {
+    title: 'Private Lessons',
+    price: '$120',
+    period: 'session',
+    description: 'Private in-water coaching at Redcliffe — pool or open water.',
+    features: [
+      '60-minute private session',
+      'Pool or open water venue',
+      'Personalised drill focus',
+      'Progress notes after each session',
+      'Bundle discounts available',
+    ],
+    highlighted: true,
+    badge: 'Most Popular',
+    // Replace with real Stripe Payment Link
+    stripeUrl: 'https://buy.stripe.com/placeholder',
+  },
+  {
+    title: 'Online Tri Coaching',
+    price: '$250',
+    period: 'month',
+    description: 'Full triathlon coaching program delivered via TrainingPeaks.',
+    features: [
+      'Personalised weekly training plan',
+      'TrainingPeaks delivery + feedback',
+      'Monthly video check-in',
+      'Swim, bike & run integration',
+      'Race-week strategy + support',
+    ],
+    // Replace with real Stripe Payment Link
+    stripeUrl: 'https://buy.stripe.com/placeholder',
+  },
+];
+---
+
+<section id="pricing" class="py-20 bg-wave-peach-light">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section header -->
+    <div class="text-center mb-16">
+      <span class="text-wave-pink font-semibold text-sm uppercase tracking-widest">Investment</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-wave-blue-dark mt-2">Coaching Pricing</h2>
+      <p class="mt-4 text-wave-gray max-w-xl mx-auto">
+        Transparent pricing, no lock-in contracts. Pay securely via Stripe.
+      </p>
+    </div>
+
+    <!-- Cards grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      {plans.map(plan => (
+        <PricingCard {...plan} />
+      ))}
+    </div>
+
+    <!-- Note -->
+    <p class="text-center text-xs text-wave-gray mt-8 opacity-70">
+      Secure payment powered by Stripe. Contact Chelsea for group rates or custom packages.
+    </p>
+  </div>
+</section>

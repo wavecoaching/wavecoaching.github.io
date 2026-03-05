@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#2B7A9E"/>
+  <!-- Blue wave -->
+  <path
+    d="M2 17 C7 12, 12 12, 17 17 C22 22, 27 22, 32 17"
+    fill="none"
+    stroke="white"
+    stroke-width="2.5"
+    stroke-linecap="round"
+  />
+  <!-- Pink wave -->
+  <path
+    d="M2 20 C7 15, 12 15, 17 20 C22 25, 27 25, 32 20"
+    fill="none"
+    stroke="#E8638B"
+    stroke-width="2"
+    stroke-linecap="round"
+    opacity="0.9"
+  />
+</svg>

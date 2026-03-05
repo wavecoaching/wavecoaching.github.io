@@ -1,0 +1,71 @@
+---
+---
+
+<section id="about" class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Section label -->
+    <div class="text-center mb-14">
+      <span class="text-wave-pink font-semibold text-sm uppercase tracking-widest">About Your Coach</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-wave-blue-dark mt-2">Meet Chelsea Seymour</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+      <!-- Photo placeholder -->
+      <div class="flex justify-center lg:justify-start">
+        <div class="relative">
+          <!-- Decorative circle background -->
+          <div class="absolute -inset-4 rounded-full bg-wave-blue-light opacity-60" aria-hidden="true"></div>
+          <!-- Avatar -->
+          <div class="relative w-64 h-64 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-wave-blue to-wave-blue-dark flex items-center justify-center shadow-2xl border-4 border-white">
+            <span class="text-7xl font-extrabold text-white select-none" aria-label="Chelsea Seymour initials">CS</span>
+          </div>
+          <!-- Badge -->
+          <div class="absolute -bottom-3 -right-3 bg-wave-pink text-white text-xs font-bold px-3 py-1.5 rounded-full shadow-lg">
+            Redcliffe, BNE
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div>
+        <h3 class="text-2xl font-bold text-wave-blue-dark mb-4">Swim specialist. Triathlon coach. Race-day obsessed.</h3>
+
+        <div class="space-y-4 text-wave-gray leading-relaxed">
+          <p>
+            Chelsea Seymour is a certified triathlon and open-water swim coach based on the beautiful
+            Redcliffe Peninsula, just north of Brisbane. With over a decade of competitive swimming
+            and triathlon experience, Chelsea has helped hundreds of athletes transform their weakest
+            discipline into their greatest asset.
+          </p>
+          <p>
+            Her coaching philosophy is simple: sustainable technique beats brute force, every time.
+            Whether you're a nervous first-timer in the pool or a seasoned Ironman athlete chasing a
+            personal best, Chelsea meets you exactly where you are.
+          </p>
+          <p>
+            Chelsea specialises in video-based stroke analysis, open water confidence building, and
+            building race-ready triathlon programs around real life &mdash; because most of us have
+            jobs, families, and limited training hours.
+          </p>
+        </div>
+
+        <!-- Credential tags -->
+        <div class="flex flex-wrap gap-2 mt-6">
+          {[
+            'Triathlon Australia Certified',
+            'Open Water Specialist',
+            'Video Stroke Analysis',
+            'Olympic & Ironman Plans',
+            'Redcliffe Local',
+          ].map(tag => (
+            <span class="bg-wave-blue-light text-wave-blue text-xs font-semibold px-3 py-1 rounded-full">
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

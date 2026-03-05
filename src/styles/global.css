@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wave-blue: #2B7A9E;
+  --color-wave-blue-dark: #1A5670;
+  --color-wave-blue-light: #E8F4F8;
+  --color-wave-pink: #E8638B;
+  --color-wave-pink-dark: #D14A73;
+  --color-wave-pink-light: #FDF0F4;
+  --color-wave-peach: #F5B895;
+  --color-wave-peach-light: #FFF5EE;
+  --color-wave-gray: #4A5568;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-wave-gray);
+}

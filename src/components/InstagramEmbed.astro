@@ -1,0 +1,25 @@
+---
+interface Props {
+  postUrl: string;
+  caption?: string;
+}
+
+const { postUrl, caption } = Astro.props;
+
+// Ensure URL ends with /
+const embedUrl = postUrl.endsWith('/') ? `${postUrl}embed/` : `${postUrl}/embed/`;
+---
+
+<div class="overflow-hidden rounded-xl shadow-md bg-wave-pink-light">
+  <iframe
+    src={embedUrl}
+    loading="lazy"
+    class="w-full border-0"
+    style="min-height: 480px;"
+    scrolling="no"
+    allowtransparency="true"
+    frameborder="0"
+    title={caption ?? 'Instagram post'}
+  ></iframe>
+</div>
+{caption && <p class="mt-2 text-sm text-wave-gray text-center">{caption}</p>}

@@ -1,0 +1,73 @@
+---
+interface Props {
+  icon: string;       // SVG path data
+  title: string;
+  description: string;
+  features: string[];
+  ctaLabel?: string;
+  ctaHref?: string;
+  accent?: 'blue' | 'pink' | 'peach';
+}
+
+const {
+  icon,
+  title,
+  description,
+  features,
+  ctaLabel = 'Learn More',
+  ctaHref = '#booking',
+  accent = 'blue',
+} = Astro.props;
+
+const accentBg = {
+  blue: 'bg-wave-blue-light',
+  pink: 'bg-wave-pink-light',
+  peach: 'bg-wave-peach-light',
+};
+
+const accentIcon = {
+  blue: 'bg-wave-blue text-white',
+  pink: 'bg-wave-pink text-white',
+  peach: 'bg-wave-peach text-white',
+};
+
+const accentText = {
+  blue: 'text-wave-blue',
+  pink: 'text-wave-pink',
+  peach: 'text-wave-blue',
+};
+---
+
+<div class={`rounded-2xl p-8 flex flex-col h-full border border-transparent hover:border-wave-blue-light hover:shadow-xl transition-all duration-300 ${accentBg[accent]}`}>
+
+  <!-- Icon -->
+  <div class={`w-12 h-12 rounded-xl flex items-center justify-center mb-5 ${accentIcon[accent]}`}>
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon} />
+    </svg>
+  </div>
+
+  <!-- Title + description -->
+  <h3 class={`text-xl font-bold mb-3 ${accentText[accent]}`}>{title}</h3>
+  <p class="text-wave-gray text-sm leading-relaxed mb-5">{description}</p>
+
+  <!-- Feature list -->
+  <ul class="space-y-2 mb-8 flex-grow">
+    {features.map(f => (
+      <li class="flex items-center gap-2 text-sm text-wave-gray">
+        <svg class={`w-4 h-4 flex-shrink-0 ${accentText[accent]}`} fill="currentColor" viewBox="0 0 20 20">
+          <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+        </svg>
+        {f}
+      </li>
+    ))}
+  </ul>
+
+  <!-- CTA -->
+  <a
+    href={ctaHref}
+    class={`mt-auto inline-block text-center font-semibold px-5 py-2.5 rounded-lg text-sm transition-all duration-200 border-2 ${accentText[accent]} border-current hover:bg-wave-blue hover:text-white hover:border-wave-blue`}
+  >
+    {ctaLabel}
+  </a>
+</div>

@@ -1,0 +1,31 @@
+<!-- Wave Coaching SVG Logo: two overlapping sine waves + wordmark -->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 160 40"
+  role="img"
+  aria-label="Wave Coaching"
+  class={Astro.props.class}
+  width={Astro.props.width ?? "160"}
+  height={Astro.props.height ?? "40"}
+>
+  <!-- Blue wave -->
+  <path
+    d="M0 22 C10 14, 20 14, 30 22 C40 30, 50 30, 60 22 C70 14, 80 14, 90 22"
+    fill="none"
+    stroke="#2B7A9E"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+  <!-- Pink wave (offset) -->
+  <path
+    d="M0 26 C10 18, 20 18, 30 26 C40 34, 50 34, 60 26 C70 18, 80 18, 90 26"
+    fill="none"
+    stroke="#E8638B"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.85"
+  />
+  <!-- Wordmark -->
+  <text x="97" y="21" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#2B7A9E" letter-spacing="0.5">WAVE</text>
+  <text x="97" y="33" font-family="Inter, sans-serif" font-size="8.5" font-weight="400" fill="#4A5568" letter-spacing="1.5">COACHING</text>
+</svg>
