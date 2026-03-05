@@ -1,9 +1,9 @@
-<!-- Wave Coaching SVG Logo: two overlapping sine waves + wordmark -->
+<!-- TriWave Coaching SVG Logo: three overlapping sine waves + wordmark -->
 <svg
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 160 40"
   role="img"
-  aria-label="Wave Coaching"
+  aria-label="TriWave Coaching"
   class={Astro.props.class}
   width={Astro.props.width ?? "160"}
   height={Astro.props.height ?? "40"}
@@ -25,7 +25,16 @@
     stroke-linecap="round"
     opacity="0.85"
   />
+  <!-- Peach wave (offset) -->
+  <path
+    d="M0 30 C10 22, 20 22, 30 30 C40 38, 50 38, 60 30 C70 22, 80 22, 90 30"
+    fill="none"
+    stroke="#F5B895"
+    stroke-width="3"
+    stroke-linecap="round"
+    opacity="0.75"
+  />
   <!-- Wordmark -->
-  <text x="97" y="21" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#2B7A9E" letter-spacing="0.5">WAVE</text>
+  <text x="97" y="21" font-family="Inter, sans-serif" font-size="12" font-weight="700" fill="#2B7A9E" letter-spacing="0.5">TRIWAVE</text>
   <text x="97" y="33" font-family="Inter, sans-serif" font-size="8.5" font-weight="400" fill="#4A5568" letter-spacing="1.5">COACHING</text>
 </svg>

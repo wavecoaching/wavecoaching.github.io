@@ -1,6 +1,6 @@
-# Wave Coaching Site
+# TriWave Coaching Site
 
-A marketing/coaching site for Wave Coaching, built with Astro and Tailwind CSS.
+A marketing/coaching site for TriWave Coaching, built with Astro and Tailwind CSS.
 
 ---
 
@@ -74,6 +74,6 @@ See `infra/README.md` for full deployment details.
 
 - This is a static site — no server-side rendering, no database, no API routes
 - Keep pages lean; prefer composing from small components
-- The site URL is `https://wavecoaching.github.io` (configured in `astro.config.mjs`)
-- The GitHub repo must be named `wavecoaching.github.io` under the `wavecoaching` account
-- Do not add a `base` path in Astro config — this is a root pages site, not a subdirectory deployment
+- The site URL is `https://wavecoaching.github.io/wavecoachingsite/` (configured in `astro.config.mjs`)
+- The GitHub repo is `wavecoaching/wavecoachingsite` with base path `/wavecoachingsite` set for project deployment
+- Do NOT modify the `base` path in Astro config
