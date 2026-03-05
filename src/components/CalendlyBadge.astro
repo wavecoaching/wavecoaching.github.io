@@ -1,0 +1,27 @@
+---
+---
+
+<section id="calendly-badge" class="py-20 bg-wave-blue-light">
+  <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-wave-blue-dark mb-4">
+      Book a Swimming Session
+    </h2>
+    <p class="text-wave-gray mb-10 leading-relaxed">
+      Click below to schedule your free 15-minute consultation call.
+    </p>
+
+    <div id="calendly-badge"></div>
+  </div>
+
+  <script is:inline>
+    window.addEventListener('load', function() {
+      Calendly.initBadgeWidget({
+        url: 'https://calendly.com/chels-seymour/1-1-swim-lesson',
+        text: 'Schedule a swim session',
+        color: '#e8638b',
+        textColor: '#ffffff',
+        branding: true
+      });
+    });
+  </script>
+</section>
