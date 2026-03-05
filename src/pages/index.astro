@@ -5,7 +5,6 @@ import Hero from '../components/Hero.astro';
 import About from '../components/About.astro';
 import Services from '../components/Services.astro';
 import Media from '../components/Media.astro';
-import Pricing from '../components/Pricing.astro';
 import Booking from '../components/Booking.astro';
 import Footer from '../components/Footer.astro';
 ---
@@ -14,10 +13,21 @@ import Footer from '../components/Footer.astro';
   <Header />
   <main>
     <Hero />
+
+    <!-- Logo banner -->
+    <section class="py-10 bg-white">
+      <div class="max-w-md mx-auto px-4">
+        <img
+          src="/triwavecoachinglogo.jpeg"
+          alt="TriWave Coaching — Swim Analysis, 1:1 Swim Lessons, Triathlon Programs"
+          class="w-full h-auto rounded-xl shadow-lg"
+        />
+      </div>
+    </section>
+
     <About />
     <Services />
     <Media />
-    <Pricing />
     <Booking />
   </main>
   <Footer />

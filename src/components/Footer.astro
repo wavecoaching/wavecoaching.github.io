@@ -4,9 +4,8 @@ import Logo from './Logo.astro';
 const quickLinks = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
-  { href: '#media', label: 'Media' },
-  { href: '#pricing', label: 'Pricing' },
-  { href: '#booking', label: 'Book Now' },
+  { href: '#media', label: 'Content' },
+  { href: '#booking', label: 'Get in Touch' },
 ];
 ---
 
@@ -18,17 +17,17 @@ const quickLinks = [
       <div>
         <Logo width="150" height="38" class="brightness-0 invert opacity-90" />
         <p class="mt-4 text-blue-100 text-sm leading-relaxed">
-          Professional swim and triathlon coaching with Chelsea Seymour.<br />
+          Swim analysis &amp; coaching with Chelsea Seymour.<br />
           Based in Redcliffe, Brisbane.
         </p>
         <!-- Social icons -->
         <div class="flex gap-4 mt-5">
           <!-- Instagram -->
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/chelsea.seymour"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="TriWave Coaching on Instagram"
+            aria-label="Chelsea Seymour on Instagram"
             class="text-blue-200 hover:text-white transition-colors duration-200"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -37,10 +36,10 @@ const quickLinks = [
           </a>
           <!-- YouTube -->
           <a
-            href="https://youtube.com/"
+            href="https://www.youtube.com/@chels.seymour"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="TriWave Coaching on YouTube"
+            aria-label="Chelsea Seymour on YouTube"
             class="text-blue-200 hover:text-white transition-colors duration-200"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -49,10 +48,10 @@ const quickLinks = [
           </a>
           <!-- Facebook -->
           <a
-            href="https://facebook.com/"
+            href="https://www.facebook.com/chelsea.seymour.412141"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="TriWave Coaching on Facebook"
+            aria-label="Chelsea Seymour on Facebook"
             class="text-blue-200 hover:text-white transition-colors duration-200"
           >
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -106,7 +105,7 @@ const quickLinks = [
     <!-- Bottom bar -->
     <div class="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-blue-200">
       <p>&copy; {new Date().getFullYear()} TriWave Coaching. All rights reserved.</p>
-      <p>Chelsea Seymour &mdash; Swim &amp; Triathlon Coach, Redcliffe, Brisbane</p>
+      <p>Chelsea Seymour &mdash; Swim Analysis &amp; Coaching, Redcliffe, Brisbane</p>
     </div>
   </div>
 </footer>
