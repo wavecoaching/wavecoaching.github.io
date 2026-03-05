@@ -1,0 +1,24 @@
+---
+---
+
+<script is:inline>
+  (function() {
+    function initCal() {
+      if (typeof Cal !== 'undefined') {
+        Cal("floatingButton", {
+          calLink: "chelsea-triwave",
+          buttonText: "Book a Session",
+          buttonColor: "#e8638b",
+          buttonTextColor: "#ffffff"
+        });
+      } else {
+        setTimeout(initCal, 100);
+      }
+    }
+    if (document.readyState === 'complete') {
+      initCal();
+    } else {
+      window.addEventListener('load', initCal);
+    }
+  })();
+</script>
