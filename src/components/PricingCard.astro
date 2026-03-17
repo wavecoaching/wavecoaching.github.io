@@ -8,6 +8,7 @@ interface Props {
   stripeUrl: string;
   highlighted?: boolean;
   badge?: string;
+  ctaLabel?: string;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   stripeUrl,
   highlighted = false,
   badge,
+  ctaLabel = 'Buy Now',
 } = Astro.props;
 ---
 
@@ -73,6 +75,6 @@ const {
     }`}
     data-stripe-placeholder="true"
   >
-    Buy Now
+    {ctaLabel}
   </a>
 </div>
